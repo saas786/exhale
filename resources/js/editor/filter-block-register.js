@@ -12,10 +12,10 @@
  */
 
 // Imports the design setting fields.
+import assign from 'lodash.assign';
 import fields from './block-controls/fields';
 
 // Imports the assign function from lodash.
-import assign from 'lodash.assign';
 
 const { addFilter } = wp.hooks;
 
@@ -29,18 +29,15 @@ const { addFilter } = wp.hooks;
  * @return object
  */
 addFilter( 'blocks.registerBlockType', 'exhale/block/register', ( settings, name ) => {
-
-	fields.forEach( field => {
-
+	fields.forEach( ( field ) => {
 		// If a given field is registered for the current block, add the
 		// attributes for the field.
 		if ( field.blocks.includes( name ) ) {
-
 			settings.attributes = assign( settings.attributes, {
-				[ field.name ] : {
-					type:    field.type,
-					default: field.default
-				}
+				[field.name]: {
+					type    : field.type,
+					default : field.default,
+				},
 			} );
 		}
 	} );

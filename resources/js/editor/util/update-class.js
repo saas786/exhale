@@ -23,15 +23,12 @@ const TokenList = wp.tokenList;
  * @return string
  */
 export default ( className, add, remove = [] ) => {
-
 	const list = new TokenList( className );
 
 	// If there are classes to remove, loop through the list and remove them
 	// if they exist in the class name.
 	if ( 0 !== remove.length ) {
-
 		list.forEach( ( oldClassName ) => {
-
 			if ( remove.includes( oldClassName ) ) {
 				list.remove( oldClassName );
 			}

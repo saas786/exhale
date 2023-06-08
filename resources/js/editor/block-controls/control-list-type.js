@@ -20,11 +20,10 @@ const { SelectControl } = wp.components;
 const { labels } = exhaleEditor;
 
 export default ( props ) => {
-
 	let options = [
-		{ label: labels.default,      value: ''       },
-		{ label: labels.none,         value: 'none'   },
-		{ label: labels.lists.disc,   value: 'disc'   },
+		{ label: labels.default, value: '' },
+		{ label: labels.none, value: 'none' },
+		{ label: labels.lists.disc, value: 'disc' },
 		{ label: labels.lists.circle, value: 'circle' },
 		{ label: labels.lists.square, value: 'square' },
 	];
@@ -34,20 +33,20 @@ export default ( props ) => {
 
 	return (
 		<SelectControl
-			key="listType"
-			label={ labels.listType }
-			value={ listType }
-			options={ options }
-			onChange={ ( selected ) => {
+  key="listType"
+  label={labels.listType}
+  value={listType}
+  options={options}
+  onChange={( selected ) => {
 				props.setAttributes( {
-					listType: selected,
-					className: updateClass(
+					listType  : selected,
+					className : updateClass(
 						props.attributes.className,
-						selected ? 'list-' + selected : '',
-						options.filter( opt => opt.value ).map( opt => 'list-' + opt.value )
-					)
+						selected ? `list-${selected}` : '',
+						options.filter( opt => opt.value ).map( opt => `list-${opt.value}` ),
+					),
 				} );
-			} }
+			}}
 		/>
 	);
 };

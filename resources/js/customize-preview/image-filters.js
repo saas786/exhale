@@ -12,13 +12,12 @@
  */
 
 function setProp( prop, func, amt ) {
-
-	if ( ! func || 'none' === func ) {
+	if ( !func || 'none' === func ) {
 		document.documentElement.style.setProperty( prop, 'none' );
 	} else {
 		document.documentElement.style.setProperty(
 			prop,
-			func + '(' + amt + '%)'
+			`${func}(${amt}%)`,
 		);
 	}
 }
@@ -27,29 +26,26 @@ let functionSetting      = 'image_default_filter_function';
 let defaultAmountSetting = 'image_default_filter_amount';
 let hoverAmountSetting   = 'image_hover_filter_amount';
 
-wp.customize( functionSetting, setting => {
-
-	setting.bind( to => {
+wp.customize( functionSetting, ( setting ) => {
+	setting.bind( ( to ) => {
 		let defaultAmount = wp.customize( defaultAmountSetting ).get();
-		let hoverAmount   = wp.customize( hoverAmountSetting   ).get();
+		let hoverAmount   = wp.customize( hoverAmountSetting ).get();
 
 		setProp( '--image-default-filter', to, defaultAmount );
-		setProp( '--image-hover-filter',   to, hoverAmount   );
+		setProp( '--image-hover-filter', to, hoverAmount );
 	} );
 } );
 
-wp.customize( defaultAmountSetting, setting => {
-
-	setting.bind( to => {
+wp.customize( defaultAmountSetting, ( setting ) => {
+	setting.bind( ( to ) => {
 		let func = wp.customize( functionSetting ).get();
 
 		setProp( '--image-default-filter', func, to );
 	} );
 } );
 
-wp.customize( hoverAmountSetting, setting => {
-
-	setting.bind( to => {
+wp.customize( hoverAmountSetting, ( setting ) => {
+	setting.bind( ( to ) => {
 		let func = wp.customize( functionSetting ).get();
 
 		setProp( '--image-hover-filter', func, to );

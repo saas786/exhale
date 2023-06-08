@@ -13,15 +13,13 @@
 
 let settings = exhaleCustomizePreview.colorSettings;
 
-Object.keys( settings ).forEach( setting => {
-
-	wp.customize( settings[ setting ].modName, value => {
-		value.bind( to => {
+Object.keys( settings ).forEach( ( setting ) => {
+	wp.customize( settings[setting].modName, ( value ) => {
+		value.bind( ( to ) => {
 			document.documentElement.style.setProperty(
-				settings[ setting ].property,
-				to ? to : 'transparent'
+				settings[setting].property,
+				to || 'transparent',
 			);
 		} );
 	} );
-
 } );

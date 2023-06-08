@@ -12,22 +12,22 @@
  */
 
 // Site title.
-wp.customize( 'blogname', value => {
-	value.bind( to => {
+wp.customize( 'blogname', ( value ) => {
+	value.bind( ( to ) => {
 		document.querySelector( '.app-header__title-link' ).textContent = to;
 	} );
 } );
 
 // Site description.
-wp.customize( 'blogdescription', value => {
-	value.bind( to => {
+wp.customize( 'blogdescription', ( value ) => {
+	value.bind( ( to ) => {
 		document.querySelector( '.app-header__description' ).textContent = to;
 	} );
 } );
 
 // Branding separator.
-wp.customize( 'branding_sep', value => {
-	value.bind( to => {
+wp.customize( 'branding_sep', ( value ) => {
+	value.bind( ( to ) => {
 		document.querySelector( '.app-header__sep' ).innerHTML = to;
 	} );
 } );

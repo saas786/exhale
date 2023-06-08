@@ -18,11 +18,11 @@ export default {
 		{
 			name      : 'default',
 			label     : labels.default,
-			isDefault : true
+			isDefault : true,
 		},
 		{
 			name  : 'reverse',
 			label : labels.reverse,
-		}
-	]
+		},
+	],
 };

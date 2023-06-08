@@ -17,12 +17,11 @@ const { __ } = wp.i18n;
 const { labels } = exhaleEditor;
 
 export default ( props, fields ) => {
-
 	return (
-		<PanelBody title={ labels.designSettings } initialOpen={ false }>
+		<PanelBody title={labels.designSettings} initialOpen={false}>
 			{
 				fields.map( ( field, i ) => {
-					return field.control( props )
+					return field.control( props );
 				} )
 			}
 		</PanelBody>

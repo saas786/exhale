@@ -10,6 +10,6 @@
  * @link      https://themehybrid.com/themes/exhale
  */
 
-export { default as gallery   } from './core/gallery';
+export { default as gallery } from './core/gallery';
 export { default as paragraph } from './core/paragraph';
 export { default as separator } from './core/separator';

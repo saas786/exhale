@@ -13,17 +13,17 @@
 
 // Gets an array of all layout class names.
 let layouts = Object.values( exhaleCustomizePreview.layouts ).map( layout =>
-	'layout-' + layout.name
+	`layout-${layout.name}`,
 );
 
-wp.customize( 'layout', value => {
-	value.bind( to => {
+wp.customize( 'layout', ( value ) => {
+	value.bind( ( to ) => {
 		let body = document.querySelector( 'body' );
 
 		// Remove all layout classes.
 		body.classList.remove( ...layouts );
 
 		// Add new layout class.
-		body.classList.add( 'layout-' + to );
+		body.classList.add( `layout-${to}` );
 	} );
 } );
