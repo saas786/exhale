@@ -16,12 +16,9 @@
 	"homepage": "https://themehybrid.com/themes/exhale",
 	"require": {
 		"php": ">=8.0",
-		"justintadlock/hybrid-carbon": "^1.0",
-		"nette/utils": "3.2.9",
-		"ramsey/uuid": "4.2.3",
-		"symfony/deprecation-contracts": "2.5.2",
-		"symfony/finder": "5.4.21",
-		"symfony/translation": "5.4.24",
+		"justintadlock/hybrid-carbon": "dev-dev#0d3c8cc as 1.0",
+		"psr/log": "^2.0",
+		"symfony/var-dumper": "^5.4.42",
 		"themehybrid/hybrid-attr": "^1.0",
 		"themehybrid/hybrid-contracts": "^2.0",
 		"themehybrid/hybrid-core": "^7.0",
@@ -34,11 +31,12 @@
 		"themehybrid/hybrid-template-hierarchy": "^1.0",
 		"themehybrid/hybrid-template-manager": "^1.0",
 		"themehybrid/hybrid-theme": "^2.0",
-		"themehybrid/hybrid-tools": "^2.0"
+		"themehybrid/hybrid-tools": "^2.0",
+		"themehybrid/hybrid-view": "^2.0"
 	},
 	"require-dev": {
-		"themehybrid/hybrid-dev-tools": "dev-main",
-		"themehybrid/hybrid-phpcs-rules": "dev-main",
+		"themehybrid/hybrid-dev-tools": "dev-dev",
+		"themehybrid/hybrid-phpcs-rules": "dev-dev as 1.0",
 		"humanmade/psalm-plugin-wordpress": "2.1.0"
 	},
 	"repositories": [
@@ -65,6 +63,9 @@
 	"config": {
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"platform": {
+			"php": "8.0"
 		}
 	},
 	"scripts": {
