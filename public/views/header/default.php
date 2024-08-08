@@ -34,6 +34,8 @@
 
 		<?php the_custom_header_markup() ?>
 
-		<?php $engine->display( 'nav/menu', 'primary', [ 'location' => 'primary' ] ) ?>
+		<?php $view = $__env ?>
+
+		<?php $view->make( 'nav/menu/primary', [ 'location' => 'primary' ] )->display() ?>
 
 	</header>

@@ -297,10 +297,10 @@ class Customize extends Customizable {
 				'fallback_refresh'    => false,
 				'render_callback'     => function( $partial, $context ) use ( $type ) {
 
-					return App::resolve( 'view/engine' )->render(
+					return App::resolve( 'theme.view' )->make(
 						sprintf( 'loop/%s', \Exhale\Template\Loop::layout( $type )->name() ),
-						! empty( $context['slugs'] ) ? $context['slugs'] : []
-					);
+						[ 'slugs' => ! empty( $context['slugs'] ) ? $context['slugs'] : [] ]
+					)->render();
 				}
 			] );
 
@@ -313,10 +313,10 @@ class Customize extends Customizable {
 				'fallback_refresh'    => false,
 				'render_callback'     => function( $partial, $context ) use ( $type )  {
 
-					return App::resolve( 'view/engine' )->render(
+					return App::resolve( 'theme.view' )->make(
 						sprintf( 'loop/%s', \Exhale\Template\Loop::layout( $type )->name() ),
-						! empty( $context['slugs'] ) ? $context['slugs'] : []
-					);
+						[ 'slugs' => ! empty( $context['slugs'] ) ? $context['slugs'] : [] ]
+					)->render();
 				}
 			] );
 

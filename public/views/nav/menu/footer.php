@@ -1,3 +1,5 @@
+<?php $data = Hybrid\Tools\collect( $__data ) ?>
+
 <?php if ( has_nav_menu( $data->get( 'location' ) ) ) : ?>
 
 	<nav <?php Hybrid\Attr\display( 'menu', $data->get( 'location' ), [

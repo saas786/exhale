@@ -9,7 +9,8 @@
 			<?php Hybrid\Media\Grabber\display( [ 'type' => 'audio' ] ) ?>
 		</figure>
 		<?php the_content() ?>
-		<?php $engine->display( 'nav/pagination', 'post' ) ?>
+		<?php $view = $__env ?>
+		<?php $view->make( 'nav/pagination/post' )->display() ?>
 	</div>
 
 	<div class="media-meta media-meta--audio o-content-width">

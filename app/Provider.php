@@ -19,8 +19,6 @@ namespace Exhale;
 use Exhale\Tools\Config;
 use Exhale\Tools\CustomProperties;
 use Hybrid\Core\ServiceProvider;
-use Hybrid\Theme\View\Legacy\Contracts\Engine as EngineContract;
-use Hybrid\Theme\View\Legacy\Contracts\View as ViewContract;
 
 /**
  * App service provider.
@@ -41,11 +39,6 @@ class Provider extends ServiceProvider {
      * @access public
      */
     public function register() {
-
-        // Create aliases for the view and engine.
-        $this->app->alias( ViewContract::class, 'view' );
-        $this->app->alias( EngineContract::class, 'view/engine' );
-
         // Bind a single instance of theme mod defaults.
         $this->app->singleton( 'exhale/mods', static fn() => array_merge(
             Config::get( '_settings-mods' ),
@@ -67,7 +60,7 @@ class Provider extends ServiceProvider {
         ) );
 
         // Bind the Laravel Mix manifest for cache-busting.
-        $this->app->singleton( 'exhale/mix', static function() {
+        $this->app->singleton( 'exhale/mix', static function () {
 
             $file     = get_parent_theme_file_path( 'public/mix-manifest.json' );
             $contents = (array) json_decode( file_get_contents( $file ), true );

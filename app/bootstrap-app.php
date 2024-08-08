@@ -54,8 +54,10 @@ $exhale->provider( \Hybrid\Media\Meta\Provider::class );
 $exhale->provider( \Hybrid\Pagination\Provider::class );
 $exhale->provider( \Hybrid\Template\Hierarchy\Provider::class );
 $exhale->provider( \Hybrid\Template\Manager\Provider::class );
-$exhale->provider( \Hybrid\Theme\View\Legacy\Provider::class );
+$exhale->provider( \Hybrid\View\Provider::class );
+$exhale->provider( \Hybrid\Theme\View\Provider::class );
 $exhale->provider( \Hybrid\Theme\Provider::class );
+$exhale->provider( \Exhale\View\Provider::class );
 $exhale->provider( \Exhale\Provider::class );
 
 // ------------------------------------------------------------------------------

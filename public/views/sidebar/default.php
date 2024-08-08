@@ -1,3 +1,5 @@
+<?php $data = Hybrid\Tools\collect( $__data ) ?>
+
 <?php if ( is_active_sidebar( $data->get( 'sidebar' ) ) ) : ?>
 
 	<aside <?php Hybrid\Attr\display( 'sidebar', $data->get( 'sidebar' ) ) ?>>

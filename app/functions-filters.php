@@ -15,31 +15,11 @@
 namespace Exhale;
 
 use Exhale\Settings\Options;
-use Exhale\Template\ErrorPage;
 use Exhale\Tools\Config;
 use Exhale\Tools\Svg;
 
 // Add social icons.
 add_filter( 'walker_nav_menu_start_el', __NAMESPACE__ . '\nav_menu_social_icons', 10, 4 );
-
-/**
- * Adds error data for the 404 content template. Passes in the `ErrorPage` object
- * as the `$error` variable.
- *
- * @since  1.0.0
- * @param  \Exhale\Tools\Collection  $data
- * @return \Exhale\Tools\Collection
- *
- * @access public
- */
-add_filter( 'hybrid/view/content/data', static function( $data ) {
-
-    if ( is_404() ) {
-        $data->add( 'error', new ErrorPage() );
-    }
-
-    return $data;
-} );
 
 /**
  * Filters the post states on the manage pages screen. Adds a "404 Page" state

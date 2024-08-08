@@ -1,3 +1,5 @@
+<?php $data = Hybrid\Tools\collect( $__data ) ?>
+
 <?php if ( has_nav_menu( $data->get( 'theme_location' ) ) ) : ?>
 
 	<div class="toggle toggle--menu-primary block md:hidden h-16 px-8 flex items-center">

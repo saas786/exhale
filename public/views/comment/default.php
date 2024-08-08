@@ -1,3 +1,5 @@
+<?php $data = Hybrid\Tools\collect( $__data ) ?>
+
 <li <?php Hybrid\Attr\display( 'comment', '', [
 	'class' => 1 === $depth ? 'sm:content-box w-full max-w-full sm:max-w-2xl mx-auto p-8' : 'mt-8 max-w-full'
 ] ) ?>>

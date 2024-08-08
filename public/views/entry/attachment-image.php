@@ -9,7 +9,8 @@
 			<?php echo wp_get_attachment_image( get_the_ID(), 'exhale-landscape-huge', false, [ 'class' => 'aligncenter' ] ) ?>
 		</figure>
 		<?php the_content() ?>
-		<?php $engine->display( 'nav/pagination', 'post' ) ?>
+		<?php $view = $__env ?>
+		<?php $view->make( 'nav/pagination/post' )->display() ?>
 	</div>
 
 	<div class="media-meta media-meta--image o-content-width">
