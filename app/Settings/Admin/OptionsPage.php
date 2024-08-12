@@ -146,8 +146,8 @@ class OptionsPage implements Bootable {
      */
     public function init() {
 
-        $this->views->add( 'general', Views\General::class );
-        $this->views->add( 'themes', Views\Themes::class );
+        $this->views->put( 'general', Views\General::class );
+        $this->views->put( 'themes', Views\Themes::class );
 
         $this->registerViews();
     }

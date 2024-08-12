@@ -35,8 +35,8 @@ class Families extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add( $name, new Family( $name, $value ) );
+    public function put( $name, $value ) {
+        parent::put( $name, new Family( $name, $value ) );
     }
 
     /**

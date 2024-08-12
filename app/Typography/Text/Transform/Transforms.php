@@ -35,8 +35,8 @@ class Transforms extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add( $name, new Transform( $name, $value ) );
+    public function put( $name, $value ) {
+        parent::put( $name, new Transform( $name, $value ) );
     }
 
     /**

@@ -298,7 +298,7 @@ class Customize extends Customizable {
      */
     public function controlsJson( Collection $json ) {
 
-        $json->add( 'backgroundPatterns', $this->patterns );
+        $json->put( 'backgroundPatterns', $this->patterns );
     }
 
     /**
@@ -311,7 +311,7 @@ class Customize extends Customizable {
      */
     public function previewJson( Collection $json ) {
 
-        $json->add( 'backgroundPatterns', $this->patterns );
+        $json->put( 'backgroundPatterns', $this->patterns );
     }
 
 }

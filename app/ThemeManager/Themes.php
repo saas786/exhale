@@ -35,8 +35,8 @@ class Themes extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add( $name, new Theme( $name, $value ) );
+    public function put( $name, $value ) {
+        parent::put( $name, new Theme( $name, $value ) );
     }
 
 }

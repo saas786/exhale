@@ -35,8 +35,8 @@ class Caps extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add( $name, new Cap( $name, $value ) );
+    public function put( $name, $value ) {
+        parent::put( $name, new Cap( $name, $value ) );
     }
 
     /**

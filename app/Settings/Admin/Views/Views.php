@@ -35,11 +35,11 @@ class Views extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
+    public function put( $name, $value ) {
 
         $view = is_string( $value ) ? new $value() : $value;
 
-        parent::add( $name, $view );
+        parent::put( $name, $view );
     }
 
 }

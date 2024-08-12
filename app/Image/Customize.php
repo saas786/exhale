@@ -117,7 +117,7 @@ class Customize extends Customizable {
      */
     public function controlsJson( Collection $json ) {
 
-        $json->add( 'imageFilters', $this->filters );
+        $json->put( 'imageFilters', $this->filters );
     }
 
 }

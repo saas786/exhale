@@ -96,7 +96,7 @@ class Component implements Bootable {
 
         // Adds each color as a custom property.
         foreach ( $this->settings as $setting ) {
-            $this->properties->add( 'color-' . $setting->name(), $setting );
+            $this->properties->put( 'color-' . $setting->name(), $setting );
         }
     }
 
@@ -121,7 +121,7 @@ class Component implements Bootable {
                 $options = array_merge( $options, $config[ $name ] );
             }
 
-            $settings->add( $name, $options );
+            $settings->put( $name, $options );
         }
     }
 

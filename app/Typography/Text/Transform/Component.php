@@ -91,7 +91,7 @@ class Component implements Bootable {
     public function registerDefaultTransforms( $transforms ) {
 
         foreach ( Config::get( 'text-transforms' ) as $name => $options ) {
-            $transforms->add( $name, $options );
+            $transforms->put( $name, $options );
         }
     }
 

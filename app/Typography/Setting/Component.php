@@ -162,7 +162,7 @@ class Component implements Bootable {
 
         // Adds each font setting as a custom property.
         foreach ( $this->settings as $setting ) {
-            $this->properties->add( 'typography-' . $setting->name(), $setting );
+            $this->properties->put( 'typography-' . $setting->name(), $setting );
         }
     }
 
@@ -201,7 +201,7 @@ class Component implements Bootable {
                 'options'     => $options,
             ];
 
-            $settings->add( $name, $value );
+            $settings->put( $name, $value );
         }
     }
 

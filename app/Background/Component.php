@@ -92,7 +92,7 @@ class Component implements Bootable {
     public function registerDefaultPatterns() {
 
         foreach ( Config::get( 'background-patterns' ) as $name => $pattern ) {
-            $this->patterns->add( $name, $pattern );
+            $this->patterns->put( $name, $pattern );
         }
     }
 

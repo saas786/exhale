@@ -35,8 +35,8 @@ class Patterns extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add(
+    public function put( $name, $value ) {
+        parent::put(
             $name,
             $value instanceof Pattern ? $value : new Pattern( $name, $value )
         );

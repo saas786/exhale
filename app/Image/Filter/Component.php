@@ -95,7 +95,7 @@ class Component implements Bootable {
 
         array_map( function( $amount ) {
 
-            $this->properties->add( "image-{$amount}-default", new CustomProperty(
+            $this->properties->put( "image-{$amount}-default", new CustomProperty(
                 ':root',
                 "--image-{$amount}-filter",
                 static function() use ( $amount ) {
@@ -126,7 +126,7 @@ class Component implements Bootable {
     public function registerDefaultFilters( Filters $filters ) {
 
         foreach ( Config::get( 'image-filters' ) as $name => $options ) {
-            $filters->add( $name, $options );
+            $filters->put( $name, $options );
         }
     }
 

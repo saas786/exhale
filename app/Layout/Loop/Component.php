@@ -93,7 +93,7 @@ class Component implements Bootable {
     public function registerDefaultLayouts( $layouts ) {
 
         foreach ( Config::get( 'layouts-loop' ) as $name => $options ) {
-            $layouts->add( $name, new Layout( $name, $options ) );
+            $layouts->put( $name, new Layout( $name, $options ) );
         }
     }
 

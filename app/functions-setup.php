@@ -138,19 +138,19 @@ add_filter( 'hybrid/template/path', static fn() => 'public/views' );
  */
 add_action( 'hybrid/templates/register', static function( $templates ) {
 
-    $templates->add( 'template-canvas.php', [
+    $templates->put( 'template-canvas.php', [
         'label' => __( 'Content Canvas', 'exhale' ),
     ] );
 
-    $templates->add( 'template-landing.php', [
+    $templates->put( 'template-landing.php', [
         'label' => __( 'Landing', 'exhale' ),
     ] );
 
-    $templates->add( 'template-landing-canvas.php', [
+    $templates->put( 'template-landing-canvas.php', [
         'label' => __( 'Landing: Content Canvas', 'exhale' ),
     ] );
 
-    // $templates->add( 'template-entry-content-only.php', [
+    // $templates->put( 'template-entry-content-only.php', [
     // 'label' => __( 'No Post Header/Footer', 'exhale' )
     // ] );
 } );

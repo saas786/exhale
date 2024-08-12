@@ -239,8 +239,8 @@ class Customize extends Customizable {
      */
     public function controlsJson( Collection $json ) {
 
-        $json->add( 'fontFamilies', $this->families );
-        $json->add( 'fontStyles', $this->styles );
+        $json->put( 'fontFamilies', $this->families );
+        $json->put( 'fontStyles', $this->styles );
     }
 
     /**
@@ -253,11 +253,11 @@ class Customize extends Customizable {
      */
     public function previewJson( Collection $json ) {
 
-        $json->add( 'typographySettings', $this->settings );
-        $json->add( 'fontFamilies', $this->families );
-        $json->add( 'fontStyles', $this->styles );
-        $json->add( 'fontVariantCaps', $this->caps );
-        $json->add( 'textTransforms', $this->transforms );
+        $json->put( 'typographySettings', $this->settings );
+        $json->put( 'fontFamilies', $this->families );
+        $json->put( 'fontStyles', $this->styles );
+        $json->put( 'fontVariantCaps', $this->caps );
+        $json->put( 'textTransforms', $this->transforms );
     }
 
 }

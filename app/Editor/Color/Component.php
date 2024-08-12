@@ -110,7 +110,7 @@ class Component implements Bootable {
         foreach ( $this->colors as $color ) {
 
             if ( ! $color->isThemeMod() ) {
-                $this->properties->add( 'editor-color-' . $color->name(), $color );
+                $this->properties->put( 'editor-color-' . $color->name(), $color );
             }
         }
 
@@ -118,7 +118,7 @@ class Component implements Bootable {
         foreach ( $this->app_colors as $color ) {
 
             if ( ! $color->isThemeMod() ) {
-                $this->properties->add( 'app-color-' . $color->name(), $color );
+                $this->properties->put( 'app-color-' . $color->name(), $color );
             }
         }
     }
@@ -143,13 +143,13 @@ class Component implements Bootable {
                 $options = array_merge( $base[ $name ], $options );
             }
 
-            $colors->add( $name, $options );
+            $colors->put( $name, $options );
         }
 
         // Store non-editor colors to print on front end.
         foreach ( $base as $name => $options ) {
             if ( ! $colors->has( $name ) ) {
-                $this->app_colors->add( $name, $options );
+                $this->app_colors->put( $name, $options );
             }
         }
     }

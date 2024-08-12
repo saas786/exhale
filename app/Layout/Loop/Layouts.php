@@ -35,8 +35,8 @@ class Layouts extends Base {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add(
+    public function put( $name, $value ) {
+        parent::put(
             $name,
             $value instanceof Layout ? $value : new Layout( $name, $value )
         );

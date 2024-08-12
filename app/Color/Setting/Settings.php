@@ -35,8 +35,8 @@ class Settings extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add( $name, new Setting( $name, $value ) );
+    public function put( $name, $value ) {
+        parent::put( $name, new Setting( $name, $value ) );
     }
 
 }

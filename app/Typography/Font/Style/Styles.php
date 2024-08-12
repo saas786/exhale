@@ -35,8 +35,8 @@ class Styles extends Collection {
      *
      * @access public
      */
-    public function add( $name, $value ) {
-        parent::add( $name, new Style( $name, $value ) );
+    public function put( $name, $value ) {
+        parent::put( $name, new Style( $name, $value ) );
     }
 
     /**

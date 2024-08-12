@@ -355,9 +355,9 @@ class Customize extends Customizable {
 			}, get_post_types( [ 'public' => true, '_builtin' => false, ], 'names', 'and' ) )
 		);
 
-		$json->add( 'loopLayouts', $this->loop_layouts );
-		$json->add( 'loopQueries', $types              );
-		$json->add( 'imageSizes',  $this->image_sizes  );
+		$json->put( 'loopLayouts', $this->loop_layouts );
+		$json->put( 'loopQueries', $types              );
+		$json->put( 'imageSizes',  $this->image_sizes  );
 	}
 
 	/**
@@ -377,7 +377,7 @@ class Customize extends Customizable {
 			}, get_post_types( [ 'public' => true, '_builtin' => false, ], 'names', 'and' ) )
 		);
 
-		$json->add( 'layouts',     $this->app_layouts );
-		$json->add( 'loopQueries', $types             );
+		$json->put( 'layouts',     $this->app_layouts );
+		$json->put( 'loopQueries', $types             );
 	}
 }

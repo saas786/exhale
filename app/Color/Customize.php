@@ -93,7 +93,7 @@ class Customize extends Customizable {
      */
     public function previewJson( Collection $json ) {
 
-        $json->add( 'colorSettings', $this->settings );
+        $json->put( 'colorSettings', $this->settings );
     }
 
 }

@@ -107,7 +107,7 @@ class Component implements Bootable {
         $config = $config ?: Config::get( 'editor-font-sizes' );
 
         foreach ( $config as $name => $options ) {
-            $sizes->add( $name, $options );
+            $sizes->put( $name, $options );
         }
     }
 

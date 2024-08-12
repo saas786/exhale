@@ -105,7 +105,7 @@ class Themes extends View {
 
         // Add the current theme to the collection.
         $current = get_stylesheet();
-        $themes->add( $current, [] );
+        $themes->put( $current, [] );
 
         // If the current theme is in the config, remove it.
         if ( isset( $config[ $current ] ) ) {
@@ -114,7 +114,7 @@ class Themes extends View {
 
         // Add all themes from the config.
         foreach ( $config as $slug => $options ) {
-            $themes->add( $slug, $options );
+            $themes->put( $slug, $options );
         }
     }
 
