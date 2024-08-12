@@ -64,7 +64,7 @@ class CustomProperty implements CssCustomProperty {
     public function cssValue() {
 
         return $this->value instanceof Closure
-                ? $this->value()
+                ? $this->value->__invoke() // phpcs:ignore SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall.DisallowDirectMagicInvokeCall
                 : $this->value;
     }
 

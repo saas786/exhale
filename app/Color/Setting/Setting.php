@@ -186,7 +186,7 @@ class Setting implements JsonSerializable, CssCustomProperty {
     public function color() {
 
         $color = $this->color instanceof Closure
-                ? $this->color()
+                ? $this->color->__invoke() // phpcs:ignore SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall.DisallowDirectMagicInvokeCall
             : $this->color;
 
         return apply_filters( "exhale/color/setting/{$this->name}/default", $color, $this );

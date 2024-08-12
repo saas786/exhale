@@ -65,7 +65,7 @@ class Mod {
         if ( isset( $mods[ $name ] ) ) {
 
             return $mods[ $name ] instanceof Closure
-                    ? $mods[ $name ]()
+                    ? $mods[ $name ]->__invoke() // phpcs:ignore SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall.DisallowDirectMagicInvokeCall
                     : $mods[ $name ];
         }
 
