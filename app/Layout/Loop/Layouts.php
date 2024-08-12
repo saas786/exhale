@@ -54,11 +54,11 @@ class Layouts extends Base {
      *
      * @access public
      */
-    public function get( $name ) {
+    public function get( $name, $default = null  ) {
 
         $name = 'default' === $name ? 'blog' : $name;
 
-        return parent::get( $name );
+        return parent::get( $name, $default );
     }
 
 }
