@@ -33,13 +33,13 @@ class Config {
      *
      * @access public
      */
-    public static function get( $name ) {
+    public static function getFromFile( $name, $default = []  ) {
 
         $file = static::path( "{$name}.php" );
 
         return (array) apply_filters(
             "exhale/config/{$name}/",
-            file_exists( $file ) ? include $file : []
+            file_exists( $file ) ? include $file : $default
         );
     }
 

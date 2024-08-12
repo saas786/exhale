@@ -102,9 +102,9 @@ class Component implements Bootable {
 
         // Back-compat with child themes that registered a config of
         // `config/font-sizes.php` pre-2.0.
-        $config = is_child_theme() ? Config::get( 'font-sizes' ) : [];
+        $config = is_child_theme() ? Config::getFromFile( 'font-sizes' ) : [];
 
-        $config = $config ?: Config::get( 'editor-font-sizes' );
+        $config = $config ?: Config::getFromFile( 'editor-font-sizes' );
 
         foreach ( $config as $name => $options ) {
             $sizes->put( $name, $options );

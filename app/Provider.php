@@ -41,8 +41,8 @@ class Provider extends ServiceProvider {
     public function register() {
         // Bind a single instance of theme mod defaults.
         $this->app->singleton( 'exhale/mods', static fn() => array_merge(
-            Config::get( '_settings-mods' ),
-            Config::get( 'settings-mods' )
+            Config::getFromFile( '_settings-mods' ),
+            Config::getFromFile( 'settings-mods' )
         ) );
 
         // Bind a single instance of the WP custom background settings.
@@ -56,7 +56,7 @@ class Provider extends ServiceProvider {
                 'default-repeat'     => 'repeat',
                 'default-size'       => 'auto',
             ],
-            Config::get( 'custom-background' )
+            Config::getFromFile( 'custom-background' )
         ) );
 
         // Bind the Laravel Mix manifest for cache-busting.

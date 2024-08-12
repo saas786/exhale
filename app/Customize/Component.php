@@ -327,7 +327,7 @@ class Component implements Bootable {
 
 		$choices  = [ '' => '' ];
 
-		foreach ( \Exhale\Tools\Config::get( 'character-entities' ) as $entity ) {
+		foreach ( \Exhale\Tools\Config::getFromFile( 'character-entities' ) as $entity ) {
 			$choices[ $entity ] = esc_html( $entity );
 		}
 

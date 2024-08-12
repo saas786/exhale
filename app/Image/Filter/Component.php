@@ -125,7 +125,7 @@ class Component implements Bootable {
      */
     public function registerDefaultFilters( Filters $filters ) {
 
-        foreach ( Config::get( 'image-filters' ) as $name => $options ) {
+        foreach ( Config::getFromFile( 'image-filters' ) as $name => $options ) {
             $filters->put( $name, $options );
         }
     }

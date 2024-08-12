@@ -85,7 +85,7 @@ function nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 
     if ( 'social' === $args->theme_location ) {
 
-        foreach ( Config::get( 'social-icons' ) as $url => $icon ) {
+        foreach ( Config::getFromFile( 'social-icons' ) as $url => $icon ) {
 
             if ( false !== strpos( $item->url, $url ) ) {
                 $item_output = str_replace(

@@ -110,8 +110,8 @@ class Component implements Bootable {
      */
     public function registerDefaultSettings( Settings $settings ) {
 
-        $base   = Config::get( '_settings-color' );
-        $config = Config::get( 'settings-color' );
+        $base   = Config::getFromFile( '_settings-color' );
+        $config = Config::getFromFile( 'settings-color' );
 
         $config = is_array( $config ) ? $config : [];
 

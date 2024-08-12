@@ -90,7 +90,7 @@ class Component implements Bootable {
      */
     public function registerDefaultCaps( $caps ) {
 
-        foreach ( Config::get( 'font-variant-caps' ) as $name => $options ) {
+        foreach ( Config::getFromFile( 'font-variant-caps' ) as $name => $options ) {
             $caps->put( $name, $options );
         }
     }

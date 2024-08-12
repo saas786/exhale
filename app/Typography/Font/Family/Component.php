@@ -93,7 +93,7 @@ class Component implements Bootable {
      */
     public function registerDefaultFamilies( $families ) {
 
-        foreach ( Config::get( 'font-families' ) as $name => $options ) {
+        foreach ( Config::getFromFile( 'font-families' ) as $name => $options ) {
             $families->put( $name, $options );
         }
     }

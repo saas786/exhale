@@ -96,7 +96,7 @@ class Component implements Bootable {
      */
     public function registerDefaultLayouts( $layouts ) {
 
-        foreach ( Config::get( 'layouts' ) as $name => $options ) {
+        foreach ( Config::getFromFile( 'layouts' ) as $name => $options ) {
             $layouts->put( $name, new Layout( $name, $options ) );
         }
     }

@@ -90,7 +90,7 @@ class Component implements Bootable {
      */
     public function registerDefaultStyles( $styles ) {
 
-        foreach ( Config::get( 'font-styles' ) as $name => $options ) {
+        foreach ( Config::getFromFile( 'font-styles' ) as $name => $options ) {
             $styles->put( $name, $options );
         }
     }

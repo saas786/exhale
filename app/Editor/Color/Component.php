@@ -133,9 +133,9 @@ class Component implements Bootable {
      */
     public function registerDefaultColors( Colors $colors ) {
 
-        $base = Config::get( '_editor-colors' );
+        $base = Config::getFromFile( '_editor-colors' );
 
-        foreach ( Config::get( 'editor-colors' ) as $name => $options ) {
+        foreach ( Config::getFromFile( 'editor-colors' ) as $name => $options ) {
 
             $name = $this->mapColor( $name );
 
