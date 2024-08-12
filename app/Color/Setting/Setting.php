@@ -110,7 +110,7 @@ class Setting implements JsonSerializable, CssCustomProperty {
      *
      * @access public
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
 
         return [
             'modName'  => $this->modName(),

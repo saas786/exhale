@@ -104,7 +104,7 @@ class Filter implements JsonSerializable {
      *
      * @access public
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
 
         return [
             'lacuna' => $this->lacuna(),

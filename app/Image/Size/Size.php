@@ -106,7 +106,7 @@ class Size implements JsonSerializable {
      *
      * @access public
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
 
         return [
             'height'      => $this->height(),

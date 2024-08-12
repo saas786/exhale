@@ -85,7 +85,7 @@ class Cap implements JsonSerializable {
      *
      * @access public
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
 
         return [
             'cap'   => $this->cap(),

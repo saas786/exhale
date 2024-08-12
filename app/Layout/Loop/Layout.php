@@ -74,7 +74,7 @@ class Layout extends Base {
      *
      * @access public
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
 
         $json = parent::jsonSerialize();
 

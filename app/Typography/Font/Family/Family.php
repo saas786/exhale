@@ -112,7 +112,7 @@ class Family implements JsonSerializable {
      *
      * @access public
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
 
         return [
             'googleName' => str_replace( '+', ' ', $this->googleName() ),
