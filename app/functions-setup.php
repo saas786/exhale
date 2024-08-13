@@ -58,6 +58,7 @@ add_action( 'after_setup_theme', static function() {
         'comment-list',
         'gallery',
         'search-form',
+        'script'
     ] );
 
     // Add custom logo support.
