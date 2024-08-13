@@ -1,8 +1,9 @@
 <?php
 
-use Exhale\Background\Provider;
 use Hybrid\Core\Application;
+
 use function Hybrid\app;
+
 /**
  * Theme bootstrap file.
  *
@@ -36,7 +37,8 @@ $exhale = booted() ? app() : new Application();
 // for running the theme. Service providers are essentially the backbone of the
 // bootstrapping process.
 
-$exhale->provider( Provider::class );
+$exhale->provider( \Exhale\Provider::class );
+$exhale->provider( \Exhale\Background\Provider::class );
 $exhale->provider( \Exhale\Block\Provider::class );
 $exhale->provider( \Exhale\CleanWP\Provider::class );
 $exhale->provider( \Exhale\Color\Provider::class );
@@ -58,7 +60,6 @@ $exhale->provider( \Hybrid\View\Provider::class );
 $exhale->provider( \Hybrid\Theme\View\Provider::class );
 $exhale->provider( \Hybrid\Theme\Provider::class );
 $exhale->provider( \Exhale\View\Provider::class );
-$exhale->provider( \Exhale\Provider::class );
 
 // ------------------------------------------------------------------------------
 // Perform bootstrap actions.
