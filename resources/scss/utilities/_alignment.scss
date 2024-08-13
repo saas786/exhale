@@ -49,13 +49,13 @@
 	.entry__content > .alignleft,
 	.entry__content .wp-block-group > .alignleft,
 	.entry__content .wp-block-group__inner-container > .alignleft {
-		margin-left: calc( ( 100% - #{ $content-width } ) / 2 );
+		margin-left: $spacing-global;
 	}
 
 	.entry__content > .alignright,
 	.entry__content .wp-block-group > .alignright,
 	.entry__content .wp-block-group__inner-container > .alignright {
-		margin-right: calc( ( 100% - #{ $content-width } ) / 2 );
+		margin-right: $spacing-global;
 	}
 }
 
