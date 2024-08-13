@@ -52,7 +52,7 @@ class Colors extends Collection {
 
         $palette = [];
 
-        foreach ( $this->sort( $this->all() ) as $color ) {
+        foreach ( $this->sortColors( $this->all() ) as $color ) {
             $palette[] = [
                 'color' => $color->hex(),
                 'name'  => $color->label(),
@@ -72,7 +72,7 @@ class Colors extends Collection {
      *
      * @access public
      */
-    public function sort( array $colors = [] ) {
+    public function sortColors( array $colors = [] ) {
 
         $colors = $colors ?: $this->all();
 
