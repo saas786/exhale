@@ -13,3 +13,6 @@ indent_size = 4
 [{*.css,*.scss}]
 indent_style = tab
 
+[{*.js,eslint.config.js}]
+indent_style = tab
+
