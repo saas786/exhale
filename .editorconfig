@@ -9,3 +9,7 @@ indent_style = tab
 
 [composer.json]
 indent_size = 4
+
+[{*.css,*.scss}]
+indent_style = tab
+
